@@ -1,0 +1,15 @@
+Listes des différentes branches :
+
+> Features
+- login
+- photo
+- description-form
+- vocal recognition
+- ...
+
+> UX
+- login-UX
+- map-UX
+- form-UX
+- graphical-charter
+- ...
