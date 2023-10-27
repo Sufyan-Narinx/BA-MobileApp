@@ -1,0 +1,40 @@
+<!-- Header de la page de connexion -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contenu principal de la page -->
+<ion-content class="ion-padding">
+  <!-- Formulaire de connexion -->
+  <form (ngSubmit)="login()" class="ion-margin-top">
+    <!-- Champ de saisie pour l'e-mail -->
+    <ion-item>
+      <ion-label position="floating">E-mail</ion-label>
+      <ion-input type="email" required></ion-input>
+    </ion-item>
+
+    <!-- Champ de saisie pour le mot de passe -->
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+
+    <!-- Bouton de connexion -->
+    <ion-button expand="full" type="submit" class="ion-margin-top">Se connecter</ion-button>
+
+    <!-- Bouton pour rediriger vers la page d'inscription -->
+    <ion-button expand="full" fill="clear" routerLink="/register" class="ion-margin-top">S'inscrire</ion-button>
+  </form>
+</ion-content>
+
+<!-- Pied de page de la page de connexion -->
+<ion-footer>
+  <!-- Contenu du pied de page ici -->
+  <ion-toolbar>
+    <ion-title>Pied de page</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
