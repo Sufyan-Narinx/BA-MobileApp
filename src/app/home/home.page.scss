@@ -1,0 +1,45 @@
+/* Définit les styles pour l'élément avec l'ID "container". */
+#container {
+  /* Centre le contenu horizontalement dans l'élément "container". */
+  text-align: center;
+
+  /* Positionne l'élément de manière absolue par rapport à son premier parent positionné. */
+  position: absolute;
+  
+  /* Place l'élément au niveau de la moitié de la hauteur de son premier parent positionné. */
+  top: 50%;
+  
+  /* Applique une transformation pour déplacer l'élément vers le haut de 50% de sa propre hauteur,
+     le recentrant ainsi verticalement dans son premier parent positionné. */
+  transform: translateY(-50%);
+}
+
+/* Cible les éléments <strong> à l'intérieur de l'élément avec l'ID "container". */
+#container strong {
+  /* Définit la taille de police pour les éléments <strong>. */
+  font-size: 20px;
+  
+  /* Définit la hauteur de ligne pour les éléments <strong>. */
+  line-height: 26px;
+}
+
+/* Cible les éléments <p> à l'intérieur de l'élément avec l'ID "container". */
+#container p {
+  /* Définit la taille de police pour les éléments <p>. */
+  font-size: 16px;
+  
+  /* Définit la hauteur de ligne pour les éléments <p>. */
+  line-height: 22px;
+
+  /* Définit la couleur du texte pour les éléments <p>. */
+  color: #8c8c8c;
+
+  /* Supprime les marges par défaut des éléments <p>. */
+  margin: 0;
+}
+
+/* Cible les liens <a> à l'intérieur de l'élément avec l'ID "container". */
+#container a {
+  /* Supprime la décoration des liens, comme les soulignements par défaut. */
+  text-decoration: none;
+}

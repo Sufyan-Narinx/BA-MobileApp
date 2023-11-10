@@ -1,0 +1,52 @@
+<!-- Balise ion-header pour l'en-tête de la page -->
+<ion-header>
+
+  <!-- Barre d'outils de l'en-tête avec une couleur de fond primaire -->
+  <ion-toolbar color="primary">
+
+    <!-- Titre centré au milieu de la barre d'outils -->
+    <ion-title class="ion-text-center">Bienvenue sur notre application</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<!-- Balise ion-content pour le contenu principal de la page -->
+<ion-content class="ion-padding">
+
+  <!-- Div pour centrer le contenu horizontalement -->
+  <div class="ion-text-center">
+
+    <!-- Image du logo de l'application avec une classe CSS "app-logo" -->
+    <img src="app-logo.png" alt="Logo de l'application" class="app-logo">
+  </div>
+
+  <!-- Grille ion-grid pour organiser les éléments en lignes et colonnes -->
+  <ion-grid class="ion-padding">
+
+    <!-- Première ligne de la grille, centrée horizontalement -->
+    <ion-row class="ion-justify-content-center">
+
+      <!-- Colonne qui occupe toute la largeur sur les petits écrans et la moitié sur les écrans moyens et plus grands -->
+      <ion-col size="12" size-md="6">
+
+        <!-- Bouton de connexion avec un lien de routage vers "/login" -->
+        <ion-button routerLink="/login" expand="full" color="primary" class="ion-rounded">Connexion</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <!-- Deuxième ligne de la grille, centrée horizontalement avec un peu de marge en haut -->
+    <ion-row class="ion-justify-content-center ion-margin-top">
+
+      <!-- Colonne qui occupe toute la largeur sur les petits écrans et la moitié sur les écrans moyens et plus grands -->
+      <ion-col size="12" size-md="6">
+
+        <!-- Bouton d'inscription avec un lien de routage vers "/register" -->
+        <ion-button routerLink="/register" expand="full" color="secondary" class="ion-rounded">Inscription</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+

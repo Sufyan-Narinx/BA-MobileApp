@@ -1,0 +1,7 @@
+{
+  "name": "UrbanReportV3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

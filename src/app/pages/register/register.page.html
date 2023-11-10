@@ -1,0 +1,56 @@
+<!-- C'est l'en-tête de la page d'inscription, qui contient une barre d'outils. -->
+<ion-header>
+  <ion-toolbar>
+    <!-- Le titre de la page d'inscription s'affiche dans la barre d'outils. -->
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- C'est le contenu principal de la page d'inscription. -->
+<ion-content>
+  <!-- Ceci est un formulaire qui utilise Angular's ngForm et déclenche la fonction "register" lors de la soumission. -->
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <!-- C'est un champ de saisie pour le prénom avec une étiquette flottante. -->
+    <ion-item>
+      <ion-label position="floating">Prénom</ion-label>
+      <ion-input type="text" ngModel name="firstName" required></ion-input>
+    </ion-item>
+
+    <!-- C'est un champ de saisie pour le nom avec une étiquette flottante. -->
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input type="text" ngModel name="lastName" required></ion-input>
+    </ion-item>
+
+    <!-- C'est un champ de saisie pour la commune avec une étiquette flottante. -->
+    <ion-item>
+      <ion-label position="floating">Commune</ion-label>
+      <ion-input type="text" ngModel name="commune" required></ion-input>
+    </ion-item>
+
+    <!-- C'est un champ de saisie pour l'adresse e-mail avec une étiquette flottante. -->
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" ngModel name="email" required></ion-input>
+    </ion-item>
+
+    <!-- C'est un champ de saisie pour le mot de passe avec une étiquette flottante. -->
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" ngModel name="password" required></ion-input>
+    </ion-item>
+
+    <!-- C'est un champ de saisie pour la confirmation du mot de passe avec une étiquette flottante. -->
+    <ion-item>
+      <ion-label position="floating">Répéter le mot de passe</ion-label>
+      <ion-input type="password" ngModel name="confirmPassword" required></ion-input>
+    </ion-item>
+
+    <!-- C'est un bouton de type "submit" qui déclenchera la soumission du formulaire.
+         Il est désactivé tant que le formulaire n'est pas valide. -->
+    <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">S'inscrire</ion-button>
+  </form>
+
+  <!-- C'est un bouton qui redirige vers la page de connexion lorsque l'utilisateur clique dessus. -->
+  <ion-button expand="block" fill="clear" routerLink="/login">Vous avez déjà un compte ?</ion-button>
+</ion-content>
