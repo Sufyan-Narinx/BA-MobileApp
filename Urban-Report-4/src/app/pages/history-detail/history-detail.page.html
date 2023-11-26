@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Your History</ion-title>
+    <ion-back-button slot="start" defaultHref="history"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>{{ (myReport | async)?.category }}</h1>
+
+  <p>reporting time : {{(myReport | async)?.reporting_date}}</p>
+
+  <div id="">
+    <ion-img></ion-img>
+  </div>
+
+  <p>{{ (myReport | async)?.description }}</p>
+</ion-content>

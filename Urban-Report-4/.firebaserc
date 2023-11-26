@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mobileapp-fcc52": {
+      "hosting": {
+        "app": [
+          "mobileapp-fcc52"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mobileapp-fcc52"
+  }
+}

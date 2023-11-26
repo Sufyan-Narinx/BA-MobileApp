@@ -1,0 +1,95 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Create a Report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="createReport()">
+    
+    <!--
+    <ion-list [inset]="true">
+      <ion-item [button]="true" [detail]="false" id="select-fruits">
+        <ion-label>Favorite Fruits</ion-label>
+        <div slot="end" id="selected-fruits">{{ selectedFruitsText }}</div>
+      </ion-item>
+    </ion-list>
+    -->
+    <!--
+    <ion-item>
+      <ion-input label="Category" [(ngModel)]="new_report.category" name="category" required></ion-input>
+    </ion-item>
+    -->
+    <ion-item>
+      <ion-select
+      placeholder="Category" 
+      [(ngModel)]="new_report.category" 
+      name="category" 
+      required>
+        <ion-select-option value="Broken Sign">Broken Sign</ion-select-option>
+        <ion-select-option value="Fallen Tree">Fallen Tree</ion-select-option>
+        <ion-select-option value="optionC">Category 3</ion-select-option>
+        <ion-select-option value="optionD">Category 4</ion-select-option>
+        <ion-select-option value="optionE">Category 5</ion-select-option>
+        <ion-select-option value="optionF">Category 6</ion-select-option>
+        <ion-select-option value="optionG">Category 7</ion-select-option>
+        <ion-select-option value="optionH">Category 8</ion-select-option>
+        <ion-select-option value="optionI">Category 9</ion-select-option>
+        <ion-select-option value="optionJ">Category 0</ion-select-option>
+        // Ajoutez d'autres options si nécessaire 
+      </ion-select>
+    </ion-item>
+
+    <!--
+    <ion-item>
+      <ion-label>Attach a Photo</ion-label>
+      <ion-input color="light" label="Attach a picture" type="file" (change)="handleFileInput($event)"></ion-input>
+    </ion-item>
+    -->
+    <ion-item>
+      <!--<ion-label>Description</ion-label>-->
+      <ion-textarea placeholder="Description" [(ngModel)]="new_report.description" name="description" rows="4" required></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <!--<ion-label>Is Private</ion-label>-->
+      <ion-toggle checked="true" [(ngModel)]="new_report.description_is_private" name="description_is_private">
+        Make your description private?
+      </ion-toggle>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">Create Report</ion-button>
+  </form>
+
+  <ion-toast
+    [isOpen]="isToastOpen"
+    message="Report added successfully"
+    [buttons]="toastBtn"
+    [duration]="6000"
+    (didDismiss)="setOpen(false)"
+    position="middle"
+  ></ion-toast>
+  <ion-toast
+    [isOpen]="isToastOpen2"
+    message="We encountered some issue with the Report"
+    [buttons]="toastBtn2"
+    [duration]="6000"
+    (didDismiss)="setOpen2(false)"
+    position="middle"
+  ></ion-toast>
+</ion-content>
+
+<!--
+<ion-modal trigger="select-fruits" #modal>
+  <ng-template>
+    <app-typeahead
+      class="ion-page"
+      title="Favorite Fruits"
+      [items]="fruits"
+      [selectedItems]="selectedFruits"
+      (selectionChange)="fruitSelectionChanged($event)"
+      (selectionCancel)="modal.dismiss()"
+    ></app-typeahead>
+  </ng-template>
+</ion-modal>
+-->
