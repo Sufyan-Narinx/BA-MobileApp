@@ -1,0 +1,26 @@
+/* CSS de base, s'applique à tous les appareils */
+ion-content {
+    padding: 16px;
+}
+
+/* Media Query pour smartphones */
+@media (max-width: 600px) {
+    ion-content {
+        padding: 8px;
+    }
+
+    ion-item {
+        --padding-start: 8px;
+        --padding-end: 8px;
+        --inner-padding-end: 8px;
+    }
+
+    ion-button {
+        margin-top: 8px;
+    }
+
+    ion-input {
+        --padding-start: 8px;
+        --padding-end: 8px;
+    }
+}

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content>
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <ion-item>
+      <ion-label position="floating">Prénom</ion-label>
+      <ion-input type="text" ngModel name="firstName" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input type="text" ngModel name="lastName" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Commune</ion-label>
+      <ion-input type="text" ngModel name="commune" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" ngModel name="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" ngModel name="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Répéter le mot de passe</ion-label>
+      <ion-input type="password" ngModel name="confirmPassword" required></ion-input>
+    </ion-item>
+ 
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating"></ion-label>
+          <ion-select ngModel name="role" required placeholder="Choisissez votre rôle">
+            <ion-select-option value="" disabled selected class="placeholder-option">Choisissez votre rôle</ion-select-option>
+            <ion-select-option value="citizen">Citoyen</ion-select-option>
+            <ion-select-option value="communalEmployee">Employé communal</ion-select-option>
+            <!-- Ajoutez ici d'autres options si nécessaire -->
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Bouton de soumission du formulaire -->
+    <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">S'inscrire</ion-button>
+  </form>
+
+  <!-- Lien vers la page de connexion -->
+  <ion-button expand="block" fill="clear" routerLink="/login">Vous avez déjà un compte ?</ion-button>
+</ion-content>

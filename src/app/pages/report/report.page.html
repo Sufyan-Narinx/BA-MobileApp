@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Signalement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Catégorie</ion-label>
+    <ion-select [(ngModel)]="reportData.category">
+      <ion-select-option value="A">A</ion-select-option>
+      <ion-select-option value="B">B</ion-select-option>
+      <ion-select-option value="C">C</ion-select-option>
+      <ion-select-option value="D">D</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-textarea [(ngModel)]="reportData.description"></ion-textarea>
+  </ion-item>
+
+  <!-- Ajoutez ici un champ pour télécharger une photo -->
+
+  <ion-button (click)="submitReport()">Envoyer le Signalement</ion-button>
+</ion-content>

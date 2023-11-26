@@ -1,0 +1,15 @@
+@media only screen and (max-width: 600px) {
+  ion-header {
+    /* Vos styles pour l'en-tête sur smartphone */
+  }
+
+  ion-title {
+    /* Styles pour le titre sur smartphone */
+    font-size: 1.2rem;
+  }
+
+  ion-button {
+    /* Styles pour les boutons sur smartphone */
+    font-size: 1rem;
+  }
+}

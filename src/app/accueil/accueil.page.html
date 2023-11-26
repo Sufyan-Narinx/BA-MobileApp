@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToProfile()">
+        <ion-icon name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contenu de votre page ici -->
+
+<ng-container *ngIf="userRole === 'communalEmployee'">
+  <!-- Boutons pour le rôle communalEmployee -->
+  <ion-button routerLink="/report">Signaler</ion-button>
+  <ion-button>Traiter</ion-button>
+</ng-container>
+
+<ng-container *ngIf="userRole === 'citizen'">
+  <!-- Bouton pour le rôle citizen -->
+  <ion-button routerLink="/report">Signaler</ion-button>
+</ng-container>
+
+
+
