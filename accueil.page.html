@@ -1,0 +1,59 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <!-- Contenu du menu ici -->
+    <ion-list>
+      <ion-item (click)="navigateToMenuItem('item1')">Item 1</ion-item>
+      <ion-item (click)="navigateToMenuItem('item2')">Item 2</ion-item>
+      <!-- Ajoutez d'autres éléments de menu selon vos besoins -->
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToProfile()">
+        <ion-icon name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content">
+  <!-- Votre contenu principal ici -->
+  <ng-container *ngIf="userRole === 'communalEmployee'">
+    <!-- Boutons pour le rôle communalEmployee -->
+    <ion-button (click)="goToReport()">Signaler</ion-button>
+    <ion-button (click)="goToManageReports()">Traiter</ion-button>
+  </ng-container>
+
+  <ng-container *ngIf="userRole === 'citizen'">
+    <!-- Bouton pour le rôle citizen -->
+    <ion-button (click)="goToReport()">Signaler</ion-button>
+  </ng-container>
+</ion-content>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="goTo('googlemaps')">
+      <ion-icon name="map-outline"></ion-icon>
+      <ion-label>Map</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="goTo('accueil')">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Accueil</ion-label>
+    </ion-tab-button>
+    <ion-tab-button (click)="goTo('user-reports')">
+      <ion-icon name="library-outline"></ion-icon>
+      <ion-label>Historique</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
